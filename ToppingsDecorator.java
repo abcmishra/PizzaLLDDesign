@@ -1,9 +1,14 @@
 abstract class ToppingsDecorator extends Pizza {
     protected Pizza pizza;
 
-    public ToppingsDecorator(Pizza pizza){
-        this.pizza=pizza;
+    public ToppingsDecorator(Pizza pizza) {
+        super(pizza.getDescription(), pizza.getBaseCost());
+        this.pizza = pizza;
     }
-    public  abstract String getDescription();
-    }
+
+    @Override
+    public abstract String getDescription();
+
+    @Override
+    public abstract double getCost();
 }

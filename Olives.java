@@ -1,12 +1,16 @@
-public class Olives extends ToppingsDecorator{
-    public Olives(Pizza pizza){
+
+class Olives extends ToppingsDecorator {
+    public Olives(Pizza pizza) {
         super(pizza);
     }
 
-    public String getDescription(){
-        return pizza.getDescription()+", Olives";
+    @Override
+    public String getDescription() {
+        return pizza.getDescription() + ", Olives";
     }
-    public double getCost(){
-        return pizza.getCost()+2.50;
+
+    @Override
+    public double getCost() {
+        return pizza.getCost() + 1.50;
     }
 }

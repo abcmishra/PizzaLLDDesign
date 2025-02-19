@@ -1,9 +1,19 @@
 abstract class Pizza {
-    protected String description = "Unknown Pizza";
-    public String getDescription(){
-        return description;
+    protected String description;
+    protected double baseCost;
 
+    public Pizza(String description, double baseCost) {
+        this.description = description;
+        this.baseCost = baseCost;
     }
-    abstract double getCost();
 
+    public String getDescription() {
+        return description;
+    }
+
+    public double getBaseCost() {
+        return baseCost;
+    }
+
+    public abstract double getCost();
 }
